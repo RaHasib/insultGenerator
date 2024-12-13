@@ -2,18 +2,16 @@ import { config } from '@/config'
 
 export const generateInsult = async (language: string = config.app.defaultLanguage): Promise<string> => {
   try {
-    const response = await fetch(
-      `/api/insult?lang=${language}`,
-      {
-        method: 'GET',
-        headers: {
-          'Accept': 'text/plain',
-          'Cache-Control': 'no-cache, no-store, must-revalidate',
-          'Pragma': 'no-cache',
-          'Expires': '0'
-        }
+    const timestamp = Date.now()
+    const apiUrl = `${config.api.baseUrl}${config.api.endpoint}?lang=${language}&t=${timestamp}`
+    const proxyUrl = `${config.api.corsProxy}${encodeURIComponent(apiUrl)}`
+
+    const response = await fetch(proxyUrl, {
+      method: 'GET',
+      headers: {
+        'Accept': 'text/plain'
       }
-    )
+    })
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`)
@@ -26,4 +24,4 @@ export const generateInsult = async (language: string = config.app.defaultLangua
     console.error('Fetch Error:', error)
     throw new Error('Failed to generate insult, please try again')
   }
-} 
+}
