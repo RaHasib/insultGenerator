@@ -1,3 +1,5 @@
+import animate from "tailwindcss-animate"
+
 /** @type {import('tailwindcss').Config} */
 export default { 
     darkMode: ["class"],
@@ -99,5 +101,5 @@ export default {
   		'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
   	},
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [animate],
 }
