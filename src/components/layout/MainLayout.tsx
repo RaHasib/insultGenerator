@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import { Footer } from './Footer'
 
 interface MainLayoutProps {
   children: ReactNode
@@ -6,12 +7,8 @@ interface MainLayoutProps {
 
 export function MainLayout({ children }: MainLayoutProps) {
   return (
-    <main className="min-h-screen bg-[#0A0118] overflow-hidden">
-      <div className="fixed inset-0 bg-gradient-radial from-purple-900/5 via-transparent to-transparent" />
+    <main className="min-h-screen bg-[#0A0118] overflow-hidden flex flex-col">
       <div className="fixed inset-0 bg-[linear-gradient(to_right,#1a1528_0.5px,transparent_1px),linear-gradient(to_bottom,#1a1528_0.5px,transparent_1px)] bg-[size:2rem_2rem] opacity-25" />
-      <div className="fixed -top-1/2 -right-1/2 w-[1000px] h-[1000px] rounded-full bg-purple-500/5 blur-[128px] animate-blob" />
-      <div className="fixed -bottom-1/2 -left-1/2 w-[1000px] h-[1000px] rounded-full bg-blue-500/5 blur-[128px] animate-blob animation-delay-2000" />
-      <div className="fixed -top-1/2 -left-1/3 w-[800px] h-[800px] rounded-full bg-violet-500/5 blur-[128px] animate-blob animation-delay-4000" />
       <div className="fixed inset-0">
         <div className="absolute top-[4rem] left-[6rem] w-8 h-8 animate-grid-cell-1 bg-purple-500/30" />
         <div className="absolute top-[12rem] left-[18rem] w-8 h-8 animate-grid-cell-2 bg-blue-500/30" />
@@ -38,8 +35,11 @@ export function MainLayout({ children }: MainLayoutProps) {
         <div className="absolute bottom-[15rem] right-[35rem] w-10 h-10 border border-blue-500/20 rounded-full animate-spin-slow animation-delay-2000" />
         <div className="absolute top-[25rem] right-[25rem] w-8 h-8 border border-violet-500/20 rounded-full animate-spin-slow animation-delay-4000" />
       </div>
-      <div className="relative max-w-screen-xl mx-auto px-4 py-24 md:py-32 grid gap-24">
+      <div className="relative flex-1 max-w-screen-xl mx-auto px-4 py-24 md:py-32 grid gap-24">
         {children}
+      </div>
+      <div className="relative">
+        <Footer />
       </div>
     </main>
   )
