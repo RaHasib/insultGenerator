@@ -4,6 +4,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Copy, Loader2, Wand2 } from "lucide-react"
 import { generateInsult } from "@/services/api"
 import { useToast } from "@/hooks/use-toast"
+import confetti from 'canvas-confetti'
 
 interface InsultCardProps {
   language: string;
@@ -15,6 +16,48 @@ export function InsultCard({ language, onNewInsult }: InsultCardProps) {
   const [isLoading, setIsLoading] = useState(false)
   const [, setError] = useState<string | null>(null)
   const { toast } = useToast()
+
+  const triggerConfetti = () => {
+    // Angry burst from left
+    confetti({
+      particleCount: 40,
+      spread: 55,
+      origin: { x: 0.1, y: 0.6 },
+      colors: ['#800000', '#8B0000', '#B22222', '#DC143C'], 
+      angle: 60,
+      gravity: 1.2,
+      startVelocity: 45,
+      decay: 0.8,
+    });
+
+    // Angry burst from right
+    setTimeout(() => {
+      confetti({
+        particleCount: 40,
+        spread: 55,
+        origin: { x: 0.9, y: 0.6 },
+        colors: ['#8B0000', '#B22222', '#DC143C', '#A40000'],
+        angle: 120,
+        gravity: 1.2,
+        startVelocity: 45,
+        decay: 0.8,
+      });
+    }, 200);
+
+    // Explosive burst from center
+    setTimeout(() => {
+      confetti({
+        particleCount: 60,
+        spread: 80,
+        origin: { x: 0.5, y: 0.7 },
+        colors: ['#800000', '#A40000', '#B22222', '#8B0000'], 
+        gravity: 1.2,
+        startVelocity: 50,
+        decay: 0.8,
+        ticks: 200
+      });
+    }, 400);
+  }
 
   const handleGenerateInsult = async () => {
     try {
@@ -28,6 +71,7 @@ export function InsultCard({ language, onNewInsult }: InsultCardProps) {
 
       setInsult(response)
       onNewInsult(response)
+      triggerConfetti() 
       
     } catch (error: unknown) {
       const errorMessage = error instanceof Error 
@@ -93,7 +137,7 @@ export function InsultCard({ language, onNewInsult }: InsultCardProps) {
           disabled={isLoading}
         >
           {isLoading ? (
-            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+            <Loader2 className="mr-2 h-4 w-4 custom-spin" />
           ) : (
             <Wand2 className="mr-2 h-4 w-4" />
           )}

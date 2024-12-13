@@ -59,6 +59,7 @@ module.exports = {
   		'grid-cell-2': 'grid-cell 8s ease-in-out infinite 2s',
   		'grid-cell-3': 'grid-cell 8s ease-in-out infinite 4s',
   		'grid-cell-4': 'grid-cell 8s ease-in-out infinite 6s',
+  		'spin-slow': 'spin 8s linear infinite',
   	},
   	keyframes: {
   		'gradient-x': {
@@ -76,10 +77,10 @@ module.exports = {
   				transform: 'translate(0, 0) scale(1)',
   			},
   			'33%': {
-  				transform: 'translate(30px, -50px) scale(1.2)',
+  				transform: 'translate(30px, -50px) scale(1.1)',
   			},
   			'66%': {
-  				transform: 'translate(-20px, 20px) scale(0.8)',
+  				transform: 'translate(-20px, 20px) scale(0.9)',
   			},
   		},
   		'grid-cell': {

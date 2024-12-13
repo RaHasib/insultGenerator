@@ -145,3 +145,30 @@ button:focus-visible {
     animation-delay: 4s;
   }
 }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.custom-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes emoji-explosion {
+  0% {
+    transform: translate(0, 0) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(
+      calc(var(--end-x) - var(--start-x)), 
+      calc(var(--end-y) - var(--start-y))
+    ) scale(1);
+    opacity: 0;
+  }
+}
