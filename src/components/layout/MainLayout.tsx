@@ -1,11 +1,11 @@
 import { ReactNode } from 'react'
-import { Footer } from './Footer'
+import Footer from './Footer'
 
 interface MainLayoutProps {
   children: ReactNode
 }
 
-export function MainLayout({ children }: MainLayoutProps) {
+ function MainLayout({ children }: MainLayoutProps) {
   return (
     <main className="min-h-screen bg-[#0A0118] overflow-hidden flex flex-col">
       <div className="fixed inset-0 bg-[linear-gradient(to_right,#1a1528_0.5px,transparent_1px),linear-gradient(to_bottom,#1a1528_0.5px,transparent_1px)] bg-[size:2rem_2rem] opacity-25" />
@@ -44,3 +44,5 @@ export function MainLayout({ children }: MainLayoutProps) {
     </main>
   )
 }
+
+export default MainLayout;

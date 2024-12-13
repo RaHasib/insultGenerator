@@ -11,7 +11,7 @@ interface InsultCardProps {
   onNewInsult: (insult: string) => void;
 }
 
-export function InsultCard({ language, onNewInsult }: InsultCardProps) {
+ function InsultCard({ language, onNewInsult }: InsultCardProps) {
   const [insult, setInsult] = useState<string>("")
   const [isLoading, setIsLoading] = useState(false)
   const [, setError] = useState<string | null>(null)
@@ -157,3 +157,5 @@ export function InsultCard({ language, onNewInsult }: InsultCardProps) {
     </Card>
   )
 } 
+
+export default InsultCard;

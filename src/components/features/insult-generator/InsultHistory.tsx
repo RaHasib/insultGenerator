@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { languages } from "@/config/languages"
 
 interface InsultHistoryProps {
   language: string;
@@ -8,14 +9,7 @@ interface InsultHistoryProps {
   history: string[];
 }
 
-export function InsultHistory({ language, onLanguageChange, history }: InsultHistoryProps) {
-  const languages = [
-    { value: 'en', label: 'English' },
-    { value: 'es', label: 'Spanish' },
-    { value: 'fr', label: 'French' },
-    { value: 'de', label: 'German' }
-  ]
-
+ function InsultHistory({ language, onLanguageChange, history }: InsultHistoryProps) {
   const truncateText = (text: string, maxLength: number = 100) => {
     return text.length > maxLength ? `${text.substring(0, maxLength)}...` : text
   }
@@ -76,3 +70,5 @@ export function InsultHistory({ language, onLanguageChange, history }: InsultHis
     </Card>
   )
 } 
+
+export default InsultHistory;

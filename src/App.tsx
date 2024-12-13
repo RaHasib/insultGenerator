@@ -1,11 +1,11 @@
-import { MainLayout } from "./components/layout/MainLayout"
-import { InsultCard } from "./components/features/insult-generator/InsultCard"
-import { InsultHistory } from "./components/features/insult-generator/InsultHistory"
+import MainLayout from "./components/layout/MainLayout"
+import InsultCard from "./components/features/insult-generator/InsultCard"
+import InsultHistory from "./components/features/insult-generator/InsultHistory"
 import { Toaster } from "@/components/ui/toaster"
 import { useState } from "react"
 import { config } from '@/config'
 
-export default function App() {
+ function App() {
   const [language, setLanguage] = useState<string>(config.app.defaultLanguage)
   const [history, setHistory] = useState<string[]>([])
 
@@ -43,3 +43,4 @@ export default function App() {
     </MainLayout>
   )
 }
+export default App;

@@ -1,6 +1,6 @@
 import { Linkedin, Heart } from "lucide-react"
 
-export function Footer() {
+ function Footer() {
   return (
     <footer className="w-full py-6 mt-auto">
       <div className="container flex flex-col items-center justify-center gap-4 px-4 text-center md:gap-6">
@@ -46,3 +46,5 @@ export function Footer() {
     </footer>
   )
 } 
+
+export default Footer;
