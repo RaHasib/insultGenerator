@@ -4,6 +4,10 @@ A modern web application that generates creative insults in multiple languages. 
 
 ![Insult Generator Screenshot](src/assets/img/insult.png)
 
+
+## 🌟 Live Preview
+Check out the live demo: [Insult Generator](https://insult-generator-psi.vercel.app/)
+
 ## 🌟 Features
 
 - Generate witty insults in multiple languages
