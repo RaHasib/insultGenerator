@@ -5,10 +5,10 @@ A modern web application that generates creative insults in multiple languages. 
 ![Insult Generator Screenshot](src/assets/img/insult.png)
 
 
-## 🌟 Live Preview
+## Live Preview
 Check out the live demo: [Insult Generator](https://insult-generator-psi.vercel.app/)
 
-## 🌟 Features
+## Features
 
 - Generate witty insults in multiple languages
 - Copy insults to clipboard
@@ -17,7 +17,7 @@ Check out the live demo: [Insult Generator](https://insult-generator-psi.vercel.
 - Animated UI elements
 
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend Framework:** React with TypeScript
 - **Styling:** Tailwind CSS
@@ -26,12 +26,6 @@ Check out the live demo: [Insult Generator](https://insult-generator-psi.vercel.
 - **Animations:** Canvas Confetti
 - **API Integration:** Evil Insult Generator API
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js (v16 or higher)
-- npm or yarn
 
 ### Installation
 
@@ -62,21 +56,19 @@ npm run dev
 yarn dev
 ```
 
-## 🌍 Available Languages
+## Available Languages
 
 - English (en)
 - Spanish (es)
 - French (fr)
 - German (de)
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [Evil Insult Generator API](https://evilinsult.com) for providing the insult generation service
-- [Shadcn/ui](https://ui.shadcn.com/) for the beautiful UI components
-- [Canvas Confetti](https://www.npmjs.com/package/canvas-confetti) for the celebration effects
 
 ---
