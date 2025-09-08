@@ -63,10 +63,6 @@ yarn dev
 - French (fr)
 - German (de)
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgments
 
 - [Evil Insult Generator API](https://evilinsult.com) for providing the insult generation service
